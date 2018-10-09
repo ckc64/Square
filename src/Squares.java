@@ -1302,12 +1302,13 @@ public class Squares extends JFrame implements Runnable{
                     else{FisrtRun = false;}
 
                     //  Mobs Bullet physicalization
-                    
+                    File enemyplayerProjectile = new File(Squares.class.getResource("enemyBullet.png").getFile());
+          		     BufferedImage enemyP = ImageIO.read(enemyplayerProjectile);
                     Rectangle mobsBullet = new Rectangle(mobsBulletX,mobsBulletY, 15, 15);
                    
-                    g.setColor(Color.MAGENTA);
-                    g.fillRect(mobsBullet.x, mobsBullet.y, mobsBullet.width, mobsBullet.height);
-                      
+                    //g.setColor(Color.MAGENTA);
+                    //g.fillRect(mobsBullet.x, mobsBullet.y, mobsBullet.width, mobsBullet.height);
+                    g.drawImage(enemyP,  mobsBullet.x, mobsBullet.y,this);
                     
                     g.setFont(new Font("Agency FB", Font.BOLD, 17));
                     g.setColor(Color.RED);
